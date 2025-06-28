@@ -1,0 +1,934 @@
+body{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* overflow-y: hidden; */
+    background-image: url(https://img.freepik.com/free-photo/abstract-uv-ultraviolet-light-composition_23-2149243965.jpg?semt=ais_hybrid&w=740);
+    background-repeat: no-repeat;
+      background-size:100%;
+}
+.Todo-App{
+    background-color: black;
+    color: white;
+    width: 520px;
+    text-align: center;
+    border-radius: 30px;
+    /* height: 100vh; */
+    border: 4px solid pink;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+
+.header h1{
+    /* background-color: aqua; */
+    font-size: 40px;
+    margin-bottom: 30px;
+    padding: 25px;
+    font-family: monospace;
+    font-weight: 900;
+}
+.form-input{
+    width: 402px;
+    padding: 10px;
+    border: none;
+    /* border-radius: 10px; */
+    background-color: transparent;
+    border: 1px solid lightskyblue ;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    color: white;
+    font-family: monospace;
+}
+.form-input:focus{
+    border: 2px solid rgb(255, 170, 184);
+}
+.form-button{
+    background-color: red;
+    width: 52px;
+    padding:11px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    border: none;
+    color: white;
+}
+.form-input::placeholder{
+    font-size: 13px;
+     font-family: monospace;
+}
+
+ul{
+  list-style: none;
+    padding: 0;         /* removes extra spacing */
+  margin: 0;
+     max-height: 400px;
+   overflow-y: scroll;
+    scrollbar-width: none;
+}
+li{
+border: 1px solid lightskyblue ;
+ margin-bottom: 10px; 
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+  width: 455px;
+}
+.bi-trash-fill{
+    /* fill:blue; */
+    color: red;
+    font-size: 20px;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
+.textInput-area{
+   width: 435px;
+    border: none;
+    outline: none;
+}
+.todo-content{
+    display: flex;
+     width: 435px;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.todo-actions button{
+    margin-left: 8px;
+    
+}
+.bi-pencil-square{
+    color: red;
+}
+.textInput-area{
+    color: white;
+    font-family: monospace;
+    overflow-y: scroll;
+height: 400px;
+}
+
+
+@media  (max-width:375px){
+    .Todo-App{
+        max-width: 130px;
+        /* min-width: 20px; */
+        /* background-color: brown; */
+        
+    }
+    .form-input{
+        max-width: 50px;
+    }
+    /*  */
+    li{
+        max-width: 60px;
+        position: relative;
+        right:20px;
+    }
+    body{
+        background-size:30px 20px;
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 500px;
+        /* background-color: red; */
+    }
+    .textInput-area{
+   max-width: 280px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+}
+@media screen and (max-width:410px){
+    .Todo-App{
+        max-width: 380px;
+        /* background-color: brown; */
+        
+    }
+    .form-input{
+        max-width: 50px;
+    }
+    /*  */
+    li{
+        max-width: 50px;
+        position: relative;
+        right:20px;
+    }
+    body{
+        background-size:30px 20px;
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 500px;
+        /* background-color: red; */
+    }
+    .textInput-area{
+   max-width: 280px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+}
+@media screen and (max-width:480px){
+    .Todo-App{
+        width: 100px;
+        /* background-color: brown; */
+        
+    }
+    .form-input{
+        max-width: 410px;
+      
+    }
+    /*  */
+    li{
+        max-width: 490px;
+    }
+    body{
+        background-size:30px 20px;
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 320px;
+    }
+    .textInput-area{
+   max-width: 280px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+}
+
+@media (max-width:414px){
+    .Todo-App{
+        width: 360px;
+        
+    }
+    .form-input{
+        width: 260px;
+    }
+    li{
+        width: 300px;
+    }
+    body{
+        background-size:400px 500px;
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 280px;
+    }
+    .textInput-area{
+   width: 280px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+}
+/* //iphone xr */
+
+@media (max-width:510px){
+    .Todo-App{
+        width: 430px;
+    }
+    .form-input{
+        width: 300px;
+        padding: 18px;
+    }
+    .form-button{
+        height: 62px;
+    }
+    li{
+        width: 360px;
+    }
+    body{
+        background-size:510px 1200px;
+
+    }
+    .form-input::placeholder{
+    font-size: 18px;
+     font-family: monospace;
+}
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 340px;
+    }
+    .textInput-area{
+   width: 290px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+}
+
+/* 535 */
+@media (max-width:600px){
+    .Todo-App{
+        width: 492px;
+    }
+    .form-input{
+        width: 400px;
+        padding: 18px;
+    }
+    .form-button{
+        height: 62px;
+    }
+    li{
+        width: 434px;
+    }
+    body{
+        background-size:610px 1200px;
+
+    }
+    .form-input::placeholder{
+    font-size: 18px;
+     font-family: monospace;
+}
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 410px;
+    }
+    .textInput-area{
+   width: 390px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+}
+
+
+
+/* //iphone 14 pro max */
+@media (max-width:460px){
+    .Todo-App{
+        width: 395px;
+    }
+    .form-input{
+        width: 260px;
+    }
+    li{
+        width: 300px;
+    }
+    body{
+        background-size:480px 1498px;
+        background-color: red;
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 280px;
+    }
+    .textInput-area{
+   width: 280px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+
+
+
+
+
+
+}
+
+/* problem */
+@media (max-width: 625px) {
+    .Todo-App{
+        width: 400px;
+    }
+    .form-input{
+        width: 300px;
+        padding: 19px;
+    }
+    li{
+        width: 340px;
+       
+    }
+    /* problem */
+    body{
+        background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg);
+        /* background-size:700px 148px; */
+        /* background-color: red; */
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+    }
+    .textInput-area{
+   width: 390px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+
+@media (min-width:600px) {
+    .Todo-App{
+        width: 500px;
+    }
+    .form-input{
+        width: 400px;
+        padding: 19px;
+    }
+    li{
+        width: 440px;
+    }
+    body{
+        background-size:700px 1498px;
+        /* background-color: red; */
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 399px;
+    }
+    .textInput-area{
+   width: 390px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+
+}
+
+@media (min-width:713px)  {
+    .Todo-App{
+        width: 670px;
+        /* background-color: brown; */
+    }
+    .form-input{
+        width: 530px;
+        padding: 30px;
+    }
+    
+    /* add */
+    .form-button{
+   width: 100px;
+    height: 85px;
+    text-align: center;
+}
+.form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+    li{
+      width: 600px;
+       
+    }
+    body{
+        background-size:800px 1998px;
+        background-color: red;
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 580px;
+    }
+    .textInput-area{
+   width: 390px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    
+}
+
+
+}
+
+@media (min-width: 784px) {
+    .Todo-App{
+        width: 700px;
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg);
+        background-size:810px 1000px;
+        /* background-color: red; */
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+
+@media (min-width: 820px) {
+    .Todo-App{
+        width: 700px;
+        /* background-color: brown; */
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:920px 1000px;
+        /* background-color: red; */
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+
+@media (min-width: 810px) {
+    .Todo-App{
+        width: 700px;
+        /* background-color: brown; */
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:920px 1200px;
+        /* background-color: red; */
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+@media (min-width: 953px) {
+    .Todo-App{
+        width: 700px;
+        /* background-color: brown; */
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:970px 1000px;
+        /* background-color: red; */
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+
+@media (min-width: 1300px) {
+    .Todo-App{
+        width: 700px;
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:2010px 1000px;
+        /* background-color: red; */
+        
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+
+@media (min-width: 1032px) {
+    .Todo-App{
+        width: 700px;
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:2010px 1000px;
+        /* background-color: red; */
+        
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+
+@media (min-width: 1016px) {
+    .Todo-App{
+        width: 700px;
+        /* background-color: brown; */
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:2010px 1300px;
+        /* background-color: red; */
+        
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+@media (min-width: 1013px) {
+    .Todo-App{
+        width: 700px;
+        /* background-color: brown; */
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:2010px 1300px;
+        /* background-color: red; */
+        
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
+@media (min-width: 2076px) {
+    .Todo-App{
+        width: 700px;
+        /* background-color: brown; */
+    }
+    .form-input{
+        width: 540px;
+        padding: 19px;
+    }
+    li{
+        width: 640px;
+        padding: 20px;
+       
+    }
+    .form-button{
+        width: 100px;
+    }
+    /* problem */
+    body{
+        /* background-image: url(https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg); */
+        background-size:2210px 1300px;
+        /* background-color: red; */
+          /* background-image: url(https://img.freepik.com/free-photo/abstract-uv-ultraviolet-light-composition_23-2149243965.jpg?semt=ais_hybrid&w=740); */
+        
+
+    }
+    .todo-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+    .textInput-area{
+   width: 570px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.form-button{
+    /* padding: 19px; */
+    height: 64px;
+    text-align: center;
+}
+    .form-input::placeholder{
+    font-size: 20px;
+     font-family: monospace;
+}
+
+}
